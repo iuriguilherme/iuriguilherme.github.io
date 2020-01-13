@@ -1,4 +1,12 @@
+## Linux / Vim / Gedit
+.*
+!.gitignore
+*~
+*.swp
+
+## Jekyll
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
