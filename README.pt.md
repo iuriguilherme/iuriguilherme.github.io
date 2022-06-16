@@ -43,7 +43,19 @@ O guia completo é o que segue:
 
 ## Licença
 
-Creative Commons Zero
+<p xmlns:dct="http://purl.org/dc/terms/">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law,
+  <a rel="dct:publisher"
+     href="https://iuriguilherme.github.io">
+    <span property="dct:title">Iuri Guilherme</span></a>
+  has waived all copyright and related or neighboring rights to
+  <span property="dct:title">Iuri Guilherme's Blog</span>.
+</p>
 
 ### Sem Direito de Autor nem Direitos Conexos  
 

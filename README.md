@@ -10,6 +10,8 @@ serving the blog are not responsible for the content.
 
 ---
 
+## LICENSE
+
 <p xmlns:dct="http://purl.org/dc/terms/">
   <a rel="license"
      href="http://creativecommons.org/publicdomain/zero/1.0/">
@@ -23,8 +25,6 @@ serving the blog are not responsible for the content.
   has waived all copyright and related or neighboring rights to
   <span property="dct:title">Iuri Guilherme's Blog</span>.
 </p>
-
-## LICENSE
 
 ### No Copyright
 
