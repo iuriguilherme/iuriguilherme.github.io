@@ -31,5 +31,3 @@ maioria dos blogs e wikis que ainda estão no ar:
 > _Eventualmente eu vou migrar as minhas publicações antigas pra cá._  
 
 Escrito no dia 16 de junho de 2022  
-
-PS: teste de edição pela interface web do github.com
