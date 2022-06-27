@@ -251,9 +251,10 @@ distribuições deliberadamente não instalam por padrão. No caso do Ubuntu LTS
 22.04:  
 
 ```bash
-iuri@tartaruga:~$ sudo apt install build-essential libbz2-dev libffi-dev \
-libgdbm-compat-dev libgdbm-dev liblzma-dev libncurses5-dev libnss3-dev \
-libreadline-dev libsqlite3-dev libssl-dev tk-dev wget zlib1g-dev  
+iuri@tartaruga:~$ sudo apt install build-essential libbz2-dev libdb5.3-dev \
+libexpat1-dev libffi-dev libgdbm-compat-dev libgdbm-dev liblzma-dev \
+libncurses5-dev libncursesw5-dev libnss3-dev libreadline-dev libsqlite3-dev \
+libssl-dev tk-dev uuid-dev wget zlib1g-dev
 ```
 
 Estes são os pacotes que a gente precisa que o sistema tenha, e que 
@@ -445,6 +446,15 @@ Não se esqueçam de clicar no sininho e se inscrever no canal.
 
 ---
 
+## Bibliografia
+
+- <https://www.python.org/downloads/release/python-3913/>  
+- <https://docs.python.org/3.9/using/unix.html>  
+- <https://docs.python.org/3.9/using/configure.html>  
+- <https://github.com/python/cpython/blob/3.9/README.rst>  
+
+---
+
 ## TL;DR:
 
 Pra quem não vai ler o blog e só quer copiar e colar no terminal os comandos:  
@@ -454,9 +464,7 @@ Pra quem não vai ler o blog e só quer copiar e colar no terminal os comandos:
 PYTHON_URL="https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz"
 echo -ne '\nif [ -d "$HOME/.local/bin" ] ; then\n    PATH="$HOME/.local/bin:$PATH"\nfi\n' 1>> ~/.profile
 source ~/.profile
-sudo apt install build-essential libbz2-dev libffi-dev libgdbm-compat-dev \
-libgdbm-dev liblzma-dev libncurses5-dev libnss3-dev libreadline-dev \
-libsqlite3-dev libssl-dev tk-dev wget zlib1g-dev
+sudo apt install build-essential libbz2-dev libdb5.3-dev libexpat1-dev libffi-dev libgdbm-compat-dev libgdbm-dev liblzma-dev libncurses5-dev libncursesw5-dev libnss3-dev libreadline-dev libsqlite3-dev libssl-dev tk-dev uuid-dev wget zlib1g-dev
 wget -c "${PYTHON_URL}" -O python.tar.xz
 tar -xf python.tar.xz
 cd python
