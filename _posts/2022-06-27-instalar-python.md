@@ -251,9 +251,9 @@ distribuições deliberadamente não instalam por padrão. No caso do Ubuntu LTS
 22.04:  
 
 ```bash
-$ sudo apt install build-essential libbz2-dev libffi-dev libgdbm-compat-dev \
-libgdbm-dev liblzma-dev libncurses5-dev libnss3-dev libreadline-dev \
-libsqlite3-dev libssl-dev tk-dev wget zlib1g-dev
+iuri@tartaruga:~$ sudo apt install build-essential libbz2-dev libffi-dev \
+libgdbm-compat-dev libgdbm-dev liblzma-dev libncurses5-dev libnss3-dev \
+libreadline-dev libsqlite3-dev libssl-dev tk-dev wget zlib1g-dev  
 ```
 
 Estes são os pacotes que a gente precisa que o sistema tenha, e que 
@@ -280,7 +280,8 @@ instalado, a gente tem uma ferramenta pra fazer download muito mais fácil de
 usar do que o Google Chrome:  
 
 ```bash
-iuri@tartaruga:~$ wget -c https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz
+iuri@tartaruga:~$ wget -c \
+https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz  
 ```
 
 O **-c** do wget serve pra continuar o download (ao invés de recomeçar do 
@@ -291,7 +292,7 @@ O **tar** vem instalado no Ubuntu por padrão, então pra descompactar o arquivo
 é só rodar o seguinte comando:  
 
 ```bash
-iuri@tartaruga:~$ tar -xf Python-3.9.13.tar.xz
+iuri@tartaruga:~$ tar -xf Python-3.9.13.tar.xz  
 ```
 
 Obviamente também dá pra usar o file-roller com o nautilus pela interface 
@@ -317,7 +318,7 @@ atual (que no bash do Ubuntu fica no atalho `${HOME}` ou `~`):
 
 ```bash
 iuri@tartaruga:~$ cd Python-3.9.13/
-iuri@tartaruga:~/Python-3.9.13$ ./configure --prefix=${HOME}/.local
+iuri@tartaruga:~/Python-3.9.13$ ./configure --prefix=${HOME}/.local  
 ```
 
 Depois deste comando, a tela vai encher de mensagens de depuração que é todos 
@@ -339,14 +340,16 @@ Não é estritamente necessário, mas eu recomendo usar este comando ao invés d
 anterior:  
 
 ```bash
-iuri@tartaruga:~/Python-3.9.13$ ./configure --prefix=${HOME}/.local 
---enable-optimizations
+./configure --prefix=${HOME}/.local --enable-optimizations  
 ```
+
+Este comando vai usar as otimizações do compilador, porque o que a gente está 
+compilando é o CPython.  
 
 Se tudo der certo (quase nunca dá), o próximo comando é:  
 
 ```bash
-iuri@tartaruga:~/Python-3.9.13$ make
+iuri@tartaruga:~/Python-3.9.13$ make  
 ```
 
 Neste comando a gente sabe se a configuração estava certa e se o Python vai 
@@ -355,7 +358,7 @@ vossa excelência não tiver **sudo** e portanto não instalou os pacotes de
 desenvolvimento do quarto passo.  
 
 ```bash
-iuri@tartaruga:~/Python-3.9.13$ make test
+iuri@tartaruga:~/Python-3.9.13$ make test  
 ```
 
 Este comando além de servir pra gente se sentir hacker (porque só quem tem um 
@@ -366,7 +369,7 @@ depois de instalado. Se der erros nesta fase é porque alguma coisa deu errado
 nas etapas anteriores e a gente ignorou.  
 
 ```bash
-iuri@tartaruga:~/Python-3.9.13$ make altinstall
+iuri@tartaruga:~/Python-3.9.13$ make altinstall  
 ```
 
 O importante de usar `make altinstall` ao invés de `make install` é porque o 
@@ -382,8 +385,8 @@ no currículo aí.
 Agora pra ter certeza que deu certo, o próximo comando é:  
 
 ```bash
-$ whereis python3.9
-python3.9: /home/iuri/.local/bin/python3.9
+iuri@tartaruga:~$ whereis python3.9  
+python3.9: /home/iuri/.local/bin/python3.9  
 ```
 
 Se ao invés de um diretório o comando não mostrar nada (só o python3.9:), 
@@ -426,16 +429,16 @@ Agora este comando vai dizer a versão específica do Python que a gente
 instalou:  
 
 ```bash
-$ python3.9 --version
-Python 3.9.13
+iuri@tartaruga:~$ python3.9 --version  
+Python 3.9.13  
 ```
 
 Os dois jeitos de garantir que a gente tá usando o pip com o python3.9 e não o 
 pip do sistema (que neste caso é o do python3.10):  
 
 ```bash
-$ pip3.9 install --user --upgrade pip
-$ python3.9 -m pip install --user --upgrade pip
+iuri@tartaruga:~$ pip3.9 install --user --upgrade pip  
+iuri@tartaruga:~$ python3.9 -m pip install --user --upgrade pip  
 ```
 
 Não se esqueçam de clicar no sininho e se inscrever no canal.  
