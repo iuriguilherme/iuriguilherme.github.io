@@ -2,7 +2,8 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2022-06-16 16:11:05 -0300
-categories: jekyll update github
+category: jekyll
+tag: github jekyll
 ---
 
 Há muito tempo atrás eu tentei usar Jekyll, Octopress, Blogophile, Pelican, 
