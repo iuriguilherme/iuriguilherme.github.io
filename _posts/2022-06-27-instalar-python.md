@@ -246,9 +246,25 @@ usa. Se tu não fizer nenhuma destas coisas, tu vai acabar, pra conseguir usar
 o computador, tendo que estudar informática, ou no mínimo estudar o 
 funcionamento das ferramentas de alto nível que a gente usa.  
 
-Pra compilar software a gente precisa de bibliotecas que os mantenedores das 
-distribuições deliberadamente não instalam por padrão. No caso do Ubuntu LTS 
-22.04:  
+Esquece os dois últimos parágrafos, é tudo mentira. Na verdade **tem como**. 
+No Ubuntu por padrão tem o **gcc** e a gente consegue compilar qualquer coisa. 
+Mas aí neste caso tu vai ter que compilar TODAS as dependências do Python. 
+Especialmente o OpenSSL. E não pára por aí, porque antes de compilar cada dependência do Python, a gente vai ter que compilar as dependências de cada 
+dependência. Foi isso que eu tive que fazer pra conseguir instalar python 
+estritamente como usuário, sem acesso administrativo em um dos servidores que 
+eu uso. Isso é basicamente o dia a dia de um usuário do Gentoo há 20 anos 
+atrás. Se eu fizer o passo a passo deste procedimento todo, este blog vai ter 
+cerca de cinquenta mil linhas ao invés de quinhentas.  
+
+Então este passo usando **sudo** é um atalho benevolente pra economizar o teu 
+tempo e te manter fora da diversão de verdade. A diversão de verdade não é 
+programar, é passar a semana inteira na tela preta do terminal pesquisando 
+flag de compilador e ouvindo o barulho do processador fritando. Change my 
+mind.  
+
+Pra compilar o Python com as dependências satisfeitas a gente precisa de 
+bibliotecas que os mantenedores das distribuições deliberadamente não instalam 
+por padrão. No caso do Ubuntu LTS 22.04:  
 
 ```bash
 iuri@tartaruga:~$ sudo apt install build-essential libbz2-dev libdb5.3-dev \
