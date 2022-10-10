@@ -204,8 +204,8 @@ blog, tu está realmente tentando instalar alguma versão específica do Python
 continuar funcionando por muito mais tempo do que todas as outras 
 alternativas, e eu previ isto em 2022.  
 
-No dia em que este blog foi escrito, a última release do Python3.9 é a 3.9.13 
-e a URL é <https://www.python.org/downloads/release/python-3913/>. Mas com 
+No dia em que este blog foi escrito, a última release do Python3.9 é a 3.9.14 
+e a URL é <https://www.python.org/downloads/release/python-3914/>. Mas com 
 certeza isto vai mudar a cada vez que tu estiver lendo este blog, e portanto, 
 esta é a parte mais difícil de todas. Todas as últimas versões devem ou 
 deveriam estar listadas na [página de download do Python][source], mas pode 
@@ -219,8 +219,8 @@ ninguém nunca faz isto, os arquivos estão no final da página, na seção
 
 A gente quer o código fonte então é algum dos arquivos etiquetados como 
 "source release". No dia em que este blog foi escrito e no caso do 
-Python3.9.13, a URL é 
-<https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz>.  
+Python3.9.14, a URL é 
+<https://www.python.org/ftp/python/3.9.14/Python-3.9.14.tar.xz>.  
 
 Neste mesmo local também é possível encontrar o instalador msi pra Windows e o 
 instalador pkg pra MacOS. Não tem os pacotes deb, rpm, etc. pras distribuições 
@@ -298,7 +298,7 @@ usar do que o Google Chrome:
 
 ```bash
 iuri@tartaruga:~$ wget -c \
-https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz  
+https://www.python.org/ftp/python/3.9.14/Python-3.9.14.tar.xz  
 ```
 
 O **-c** do wget serve pra continuar o download (ao invés de recomeçar do 
@@ -309,7 +309,7 @@ O **tar** vem instalado no Ubuntu por padrão, então pra descompactar o arquivo
 é só rodar o seguinte comando:  
 
 ```bash
-iuri@tartaruga:~$ tar -xf Python-3.9.13.tar.xz  
+iuri@tartaruga:~$ tar -xf Python-3.9.14.tar.xz  
 ```
 
 Obviamente também dá pra usar o file-roller com o nautilus pela interface 
@@ -334,8 +334,8 @@ atual (que no bash do Ubuntu fica no atalho `${HOME}` ou `~`):
 
 
 ```bash
-iuri@tartaruga:~$ cd Python-3.9.13/
-iuri@tartaruga:~/Python-3.9.13$ ./configure --prefix=${HOME}/.local  
+iuri@tartaruga:~$ cd Python-3.9.14/
+iuri@tartaruga:~/Python-3.9.14$ ./configure --prefix=${HOME}/.local  
 ```
 
 Depois deste comando, a tela vai encher de mensagens de depuração que é todos 
@@ -366,7 +366,7 @@ compilando é o CPython.
 Se tudo der certo (quase nunca dá), o próximo comando é:  
 
 ```bash
-iuri@tartaruga:~/Python-3.9.13$ make  
+iuri@tartaruga:~/Python-3.9.14$ make  
 ```
 
 Neste comando a gente sabe se a configuração estava certa e se o Python vai 
@@ -375,7 +375,7 @@ vossa excelência não tiver **sudo** e portanto não instalou os pacotes de
 desenvolvimento do quarto passo.  
 
 ```bash
-iuri@tartaruga:~/Python-3.9.13$ make test  
+iuri@tartaruga:~/Python-3.9.14$ make test  
 ```
 
 Este comando além de servir pra gente se sentir hacker (porque só quem tem um 
@@ -386,7 +386,7 @@ depois de instalado. Se der erros nesta fase é porque alguma coisa deu errado
 nas etapas anteriores e a gente ignorou.  
 
 ```bash
-iuri@tartaruga:~/Python-3.9.13$ make altinstall  
+iuri@tartaruga:~/Python-3.9.14$ make altinstall  
 ```
 
 O importante de usar `make altinstall` ao invés de `make install` é porque o 
@@ -447,7 +447,7 @@ instalou:
 
 ```bash
 iuri@tartaruga:~$ python3.9 --version  
-Python 3.9.13  
+Python 3.9.14  
 ```
 
 Os dois jeitos de garantir que a gente tá usando o pip com o python3.9 e não o 
@@ -464,7 +464,7 @@ Não se esqueçam de clicar no sininho e se inscrever no canal.
 
 ## Bibliografia
 
-- <https://www.python.org/downloads/release/python-3913/>  
+- <https://www.python.org/downloads/release/python-3914/>  
 - <https://docs.python.org/3.9/using/unix.html>  
 - <https://docs.python.org/3.9/using/configure.html>  
 - <https://github.com/python/cpython/blob/3.9/README.rst>  
@@ -477,7 +477,7 @@ Pra quem não vai ler o blog e só quer copiar e colar no terminal os comandos:
 
 ```bash
 ## Alterar essa URL pra usar outra versão conforme a necessidade
-PYTHON_URL="https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz"
+PYTHON_URL="https://www.python.org/ftp/python/3.9.14/Python-3.9.14.tar.xz"
 echo -ne '\nif [ -d "$HOME/.local/bin" ] ; then\n    PATH="$HOME/.local/bin:$PATH"\nfi\n' 1>> ~/.profile
 source ~/.profile
 sudo apt install build-essential libbz2-dev libdb5.3-dev libexpat1-dev libffi-dev libgdbm-compat-dev libgdbm-dev liblzma-dev libncurses5-dev libncursesw5-dev libnss3-dev libreadline-dev libsqlite3-dev libssl-dev tk-dev uuid-dev wget zlib1g-dev
